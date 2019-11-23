@@ -1,0 +1,163 @@
+body {
+  color: #fff;
+  background: #1D1D1D;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h2, h3 {
+  color: #64b3fc;
+  margin-top: 0;
+  font-size: 20px;
+}
+.timeline {
+  line-height: 1.4em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.timeline h2, .timeline h3 {
+  line-height: 2em;
+}
+.timeline-item {
+  padding-left: 40px;
+  position: relative;
+}
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+.timeline-info {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0 0 .5em 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.info1 {
+  
+}
+.timeline-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+}
+.timeline-marker:before {
+  background: transparent;
+  border: 3px solid #64d1fc;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 15px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 15px;
+}
+/* 调虚实的 */
+.timeline-marker:nth-child(3n)::before{
+  background: #64d1fc;
+  border: 3px solid transparent;
+}
+.timeline-marker:after {
+  content: "";
+  width: 3px;
+  background: #CCD5DB;
+  display: block;
+  position: absolute;
+  top: 24px;
+  bottom: 0;
+  left: 6px;
+}
+.timeline-content {
+  padding-bottom: 40px;
+}
+.timeline-content p:last-child {
+  margin-bottom: 0;
+}
+.timeline-content p {
+  font-size: 14px;
+  line-height: 2em;
+}
+.period .timeline-marker:before {
+  background: transparent;
+  content: "";
+  width: 15px;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  top: 0;
+  bottom: 30px;
+  position: absolute;
+  border-top: 3px solid #CCD5DB;
+  border-bottom: 3px solid #CCD5DB;
+}
+.period .timeline-marker:after {
+  content: "";
+  height: 32px;
+  top: auto;
+}
+.period .timeline-content {
+  padding: 40px 0 70px;
+}
+.period .timeline-title {
+  margin: 0;
+}
+
+ @media (min-width: 992px) {
+  .timeline-centered,
+  .timeline-centered .timeline-item,
+  .timeline-centered .timeline-info,
+  .timeline-centered .timeline-marker,
+  .timeline-centered .timeline-content {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .timeline-centered .timeline-item {
+    padding-bottom: 40px;
+    overflow: hidden;
+  }
+  .timeline-centered .timeline-marker {
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5px;
+  }
+  .timeline-centered .timeline-info,
+  .timeline-centered .timeline-content {
+    width: 50%;
+  }
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-info {
+    float: left;
+    text-align: right;
+    padding-right: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-content {
+    float: right;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(even) .timeline-info {
+    float: right;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(even) .timeline-content {
+    float: left;
+    text-align: right;
+    padding-right: 30px;
+  }
+  .timeline-centered > .timeline-item.period .timeline-content {
+    float: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .timeline-centered .timeline-item.period {
+    padding: 50px 0 90px;
+  }
+}
