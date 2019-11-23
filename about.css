@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: -1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.background {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  overflow-x: hidden;
+ }
+.status-bg {
+  width: 110%;
+  height: 110%;
+  filter: blur(5px);
+}
+.bg-photo {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}

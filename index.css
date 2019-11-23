@@ -1,18 +1,54 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .background {
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .status-bg {
-  width: 98%;
-  height: 98%;
-  z-index: -1;
+  width: 100%;
+  height: 100%;
   filter: blur(5px);
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+
+  width: 24%;
+  height: 100%;
+}
+.overflow {
+  float: left;
+  width: 76%;
+  height: 100%;
+  overflow-x: hidden;
+}
+.article {
+  width: 102%;
+  height: 100%;
+  background-color: #FFF;
+  padding: auto 10%;
+  
+  overflow-y: scroll;
+}
+.status-bar {
+  width: 18%;
+  height: 80%;
+  margin: auto;
+
+  position: absolute;
 }
 .bg-photo {
   width: 100%;
@@ -20,97 +56,61 @@
   max-width: 100%;
   max-height: 100%;
 }
-.wrapper {
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-
-.aside {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 24%;
-  height: 100%;
-  float: left;
-}
-
-.article {
-  background-color: #FFF;
-  width: 76%;
-  height: 100%;
-  float: left;
-  position: relative;
-}
-
-.statusbar {
-  width: 18%;
-  height: 80%;
-
-  position: absolute;
-  margin: auto;
-}
-.autor-img {
+.author-img {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  z-index: 1;
 }
-.autor-photo {
+.author-photo {
   width: 100px;
   height: 100px;
   max-width: 150px;
   max-height: 150px;
   border-radius: 50%;
 }
-.autor-info {
-  font-size: 14px;
+.author-info {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  font-size: 14px;
 }
-.autor-name {
+.author-name {
+  margin-top: 5%;
   font-size: 20px;
   font-weight: bolder;
   color: white;
-
-  margin-top: 5%;
 }
-.autor-dec {
-  color: white;
+.author-dec {  
   text-align: center;
-
   margin-top: 5%;
+  color: white;
 }
 .items {
   margin-top: 15%;
-  z-index: 1;
-
 }
 .items-left {
-  float: left;
-  width: 50%;
-
+  float: left;  
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
   align-content: stretch;
+
+  width: 50%;
 }
 .items-right {
   float: left;
-  width: 50%;
-
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
   align-content: stretch;
+
+  width: 50%;
 }
 .item-img {
   width: 18%;
@@ -120,43 +120,91 @@
   border-radius: 50%;
 }
 .item-member {
+  position: relative;
+  padding: auto;
   width: 100%;
   height: 30%;
   margin-top: 10%;
-  position: relative;
-  padding: auto;
+  list-style: none;
 }
 .item-name {
+  position: absolute;
+  margin: 5% 5%;
   color: white;
   font-size: 14px;
   text-decoration: none;
-  position: absolute;
-  margin: 5% 5%;
-}
-.blogs {
-  width: 100%;
-  height: 100%;
 }
 .headline {
-  width: 70%;
-  height: 38%;
-  background-color: grey;
-
   position: relative;
-  left: 15%;
+  left: 10%;
+  
+  width: 80%;
+  height: 35%;
   margin-bottom: 1%;
 }
+.blog-title {
+  margin: 0.5%;
+  
+  font-weight: bolder;
+}
+.blog-date {
+  margin-bottom: 1%;
+  color: #bbb;
+  font-size: smaller;
+}
+.blog-desc {
+  margin-bottom: 0.6%;
+  font-size: 14px;
+  line-height: 150%;
+}
+.blog-link {
+  color: rgb(0, 174, 255);
+  font-size: smaller;
+}
+.blog-bg {
+  margin-top: 1.2%;
+  width: 100%;
+  height: 58%;
+  max-width: 100%;
+  max-height: 80%;  
+}
+.blog-photo {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
 .blog-list {
-  width: 70%;
-  height: 60%;
-
-  max-height: 70%;
   position: relative;
-  left: 15%;
+  left: 10%;
+
+  width: 80%;
+  height: 60%;
 }
 .blog-name {
+  padding-top: 1.8%;
+  border-top: 1px solid #bbb;
   width: 100%;
   height: 30%;
-  border-top: 1px solid #ccc;
   list-style: none;
+}
+.blog-name .photo {
+  float: left;
+
+  width: 18%;
+  height: 70%;
+  max-width: 30%;
+  max-height: 80%;
+}
+.blog-name .bg {
+  float: left;
+
+  padding-left: 2%;
+  width: 78%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 60%;
+}
+.bg .desc {
+  margin-bottom: 2%;
 }
