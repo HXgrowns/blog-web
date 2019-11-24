@@ -36,8 +36,10 @@ h2, h3 {
   text-transform: uppercase;
   white-space: nowrap;
 }
-.info1 {
-  
+.timeline-info span {
+  background-image: linear-gradient(to right, deeppink, dodgerblue);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .timeline-marker {
   position: absolute;
@@ -58,8 +60,8 @@ h2, h3 {
   left: 0;
   width: 15px;
 }
-/* 调虚实的 */
-.timeline-marker:nth-child(3n)::before{
+/* 调虚实 */
+.timeline-item:nth-child(odd):not(:first-child) .timeline-marker:before {
   background: #64d1fc;
   border: 3px solid transparent;
 }
@@ -131,27 +133,27 @@ h2, h3 {
   .timeline-centered .timeline-content {
     width: 50%;
   }
-  .timeline-centered > .timeline-item:nth-child(odd) .timeline-info {
+  .timeline-item:nth-child(odd) .timeline-info {
     float: left;
     text-align: right;
     padding-right: 30px;
   }
-  .timeline-centered > .timeline-item:nth-child(odd) .timeline-content {
+  .timeline-item:nth-child(odd) .timeline-content {
     float: right;
     text-align: left;
     padding-left: 30px;
   }
-  .timeline-centered > .timeline-item:nth-child(even) .timeline-info {
+  .timeline-item:nth-child(even) .timeline-info {
     float: right;
     text-align: left;
     padding-left: 30px;
   }
-  .timeline-centered > .timeline-item:nth-child(even) .timeline-content {
+  .timeline-item:nth-child(even) .timeline-content {
     float: left;
     text-align: right;
     padding-right: 30px;
   }
-  .timeline-centered > .timeline-item.period .timeline-content {
+  .timeline-item.period .timeline-content {
     float: none;
     padding: 0;
     width: 100%;
@@ -159,5 +161,6 @@ h2, h3 {
   }
   .timeline-centered .timeline-item.period {
     padding: 50px 0 90px;
+    margin-top: -5px;
   }
 }

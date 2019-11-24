@@ -208,3 +208,48 @@
 .bg .desc {
   margin-bottom: 2%;
 }
+@media screen 
+  and (max-width: 1400px) {
+  .aside {  
+    width: 12%;
+    height: 100%;
+  }
+  .author-photo {
+    width: 50px;
+    height: 50px;
+  }
+  .author-info,
+  .author-name,
+  .author-dec,
+  .item-name {
+    display: none;
+  }
+  .items {
+    margin-top: 15%;
+    clear: both;
+  }
+  .items-left {
+    float: right;
+    width: 60%;
+  }
+  .items-right {
+    float: right;
+    width: 60%;
+  }
+  .item-img {
+    width: 30%;
+    height: 30%;
+    max-width: 50%;
+    max-height: 50%;
+  }
+  .blog-photo {
+    height: 90%;
+  }
+  .overflow {
+    float: left;
+    width: 88%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+}
