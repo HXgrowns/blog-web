@@ -1,38 +1,38 @@
 body {
+  padding: 0;
+  overflow-x: hidden;
   color: #fff;
   background: #1D1D1D;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 0;
-  overflow-x: hidden;
 }
 
 h2, h3 {
-  color: #64b3fc;
   margin-top: 0;
+  color: #64b3fc;
   font-size: 20px;
 }
 .timeline {
-  line-height: 1.4em;
-  list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
+  line-height: 1.4em;
+  list-style: none;
 }
 .timeline h2, .timeline h3 {
   line-height: 2em;
 }
 .timeline-item {
-  padding-left: 40px;
   position: relative;
+  padding-left: 40px;
 }
 .timeline-item:last-child {
   padding-bottom: 0;
 }
 .timeline-info {
+  margin: 0 0 .5em 0;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 3px;
-  margin: 0 0 .5em 0;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -60,20 +60,20 @@ h2, h3 {
   left: 0;
   width: 15px;
 }
-/* 调虚实 */
 .timeline-item:nth-child(odd):not(:first-child) .timeline-marker:before {
   background: #64d1fc;
   border: 3px solid transparent;
 }
 .timeline-marker:after {
-  content: "";
-  width: 3px;
-  background: #CCD5DB;
   display: block;
   position: absolute;
   top: 24px;
   bottom: 0;
   left: 6px;
+
+  content: "";
+  width: 3px;
+  background: #CCD5DB;
 }
 .timeline-content {
   padding-bottom: 40px;
@@ -86,22 +86,22 @@ h2, h3 {
   line-height: 2em;
 }
 .period .timeline-marker:before {
+  top: 0;
+  bottom: 30px;
+  position: absolute;
+  border-top: 3px solid #CCD5DB;
+  border-bottom: 3px solid #CCD5DB;
   background: transparent;
   content: "";
   width: 15px;
   height: auto;
   border: none;
   border-radius: 0;
-  top: 0;
-  bottom: 30px;
-  position: absolute;
-  border-top: 3px solid #CCD5DB;
-  border-bottom: 3px solid #CCD5DB;
 }
 .period .timeline-marker:after {
+  top: auto;
   content: "";
   height: 32px;
-  top: auto;
 }
 .period .timeline-content {
   padding: 40px 0 70px;
@@ -111,6 +111,15 @@ h2, h3 {
 }
 
  @media (min-width: 992px) {
+   .start {
+     position: relative;
+     z-index: 10000;
+     top: 143px;
+     left: 49.3%;
+     width: 15px;
+     height: 2px;
+     background: #fff;
+   }
   .timeline-centered,
   .timeline-centered .timeline-item,
   .timeline-centered .timeline-info,
