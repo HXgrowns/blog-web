@@ -9,10 +9,10 @@ img {
   display: inline-block;
 }
 
-article img.background {  
+.background {  
   position: absolute;
-  width: 100%;
-  height: 652px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .close {
